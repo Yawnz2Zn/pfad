@@ -117,6 +117,21 @@ Name the repo whatever you like — `why-are-we-here` is fine — but make sure:
 - it is on **your own account**, not the org,
 - the essay is in `README.md` at the top level, so it renders on the repo's front page.
 
+## Check it before you submit
+
+A script checks what a script can check — the two files are there, the essay is
+the right length, `PROCESS.md` says something, the history spans more than one
+sitting, nothing that does not belong is committed. Run it inside your repo:
+
+```bash
+uv run https://raw.githubusercontent.com/sd5913/pfad/2026/assignments/check.py
+```
+
+To have GitHub run it on every push, copy [`check.yml`](check.yml) into your repo
+as `.github/workflows/check.yml` and push. The **Actions** tab then shows a green
+tick or a red cross, with the same checklist. A tick means the repo has the right
+shape; whether the essay is any good is still a person's call.
+
 ## How it is marked
 
 | | |
@@ -147,3 +162,21 @@ Other things worth your time, in no particular order:
 If you have not finished [`week01/README.md`](../week01/README.md), do that first —
 it covers creating a repository, committing, and pushing, which is everything this
 assignment needs mechanically.
+
+## My Reflection
+git add README.md PROCESS.md
+git commit -m "first draft of intro and process"
+git push
+
+## Intro
+During my graduation project, I was developing a web game while knowing almost nothing about code. 
+I relied on Claude to write most of the features, and they worked. But whenever I wanted to make a subjective adjustment — the pacing of a transition, the weight of a bounce, the mood of a scene — I could not find the place in the code responsible for it. 
+ Even when Claude gave me a small, targeted patch, I did not know where to paste it or how to connect it to the rest of the project.
+  My only option was to ask it to rewrite the entire file from scratch, over and over, and then run it again. 
+  It was slow, repetitive, and frustrating.
+   Worse, the result was often not what I truly wanted, because I could only describe a feeling in vague words rather than specify it precisely. 
+   That is why I began to ask: if machines can already write good code in 2026, why should I still learn to program?
+    My answer is that I need to learn not just how to write code, but how to read and understand it — how to make it serve my intentions instead of imposing its own defaults. 
+    Understanding, I realised, is the precondition of owning a work.
+
+    When AI can write code, programming becomes less about producing and more about judging. What this course teaches me is not how to generate code, but how to read, evaluate, and revise it — to be a reader who answers for the work.
